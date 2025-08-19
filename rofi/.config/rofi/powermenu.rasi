@@ -1,0 +1,99 @@
+@import "catppuccin-mocha"
+
+/* Catppuccin Mocha Colors */
+* {
+    /* Theme-specific color assignments */
+    bg-color: rgba(30, 30, 46, 0.3);              /* base with transparency */
+    bg-color-alt: rgba(69, 71, 90, 0.6);           /* surface1 with transparency */
+    bg-color-selected: rgba(203, 166, 247, 0.2);   /* mauve with low opacity */
+    fg-color: #cdd6f4;                             /* text */
+    accent-color: #cba6f7;                         /* mauve */
+    border-color: rgba(108, 112, 134, 0.6);        /* overlay0 with transparency */
+    background-color: transparent;
+    text-color: @fg-color;
+    handle-color: rgba(186, 194, 222, 0.6);        /* subtext1 with transparency */
+ }
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 200px;
+    x-offset: 0px;
+    y-offset: 0px;
+    enabled: true;
+    margin: 0px;
+    padding: 8px 0px;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: @border-color;
+    background-color: @bg-color;
+    cursor: "default";
+}
+
+mainbox {
+    enabled: true;
+    spacing: 8px;
+    margin: 0px;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    children: [ "listview" ]; /* Remove inputbar and message */
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 4; /* Adjust based on number of menu options */
+    cycle: true;
+    dynamic: true;
+    scrollbar: false; /* No scrollbar needed for a small menu */
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 5px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element {
+    transparency: "real";
+    enabled: true;
+    spacing: 0px;
+    margin: 0px 10px;
+    padding: 8px 10px; /* Slightly more padding for better spacing */
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: rgba(176, 176, 176, 0.2);
+    background-color: @bg-color-alt;
+    text-color: @fg-color;
+    cursor: pointer;
+}
+
+element selected.normal {
+    border-color: @accent-color;
+    background-color: @bg-color-selected;
+    text-color: @fg-color;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 0px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: inherit;
+}

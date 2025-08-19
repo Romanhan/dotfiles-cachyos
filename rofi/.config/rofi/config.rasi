@@ -1,0 +1,16 @@
+configuration {
+    modi: "drun,run,filebrowser,window";
+    font: "CaskaydiaCove Nerd Font Propo 10";
+    show-icons: true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format: "{w} · {c} · {t}";
+    icon-theme: "Tela-circle-dracula";
+    drun-match-fields: "name,generic,exec,categories,keywords";
+    matching: "fuzzy";
+}
+
+@theme "theme.rasi"

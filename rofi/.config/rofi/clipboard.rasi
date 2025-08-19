@@ -1,0 +1,109 @@
+@import "catppuccin-mocha"
+
+configuration {
+    modi: "dmenu";
+    show-icons: false;
+    icon-theme: "";
+}
+
+* {
+    /* Theme-specific color assignments */
+    bg-color: rgba(30, 30, 46, 0.5);              /* base with transparency */
+    bg-color-alt: rgba(69, 71, 90, 0.6);           /* surface1 with transparency */
+    bg-color-selected: rgba(203, 166, 247, 0.2);   /* mauve with low opacity */
+    fg-color: #cdd6f4;                             /* text */
+    accent-color: #cba6f7;                         /* mauve */
+    border-color: rgba(108, 112, 134, 0.6);        /* overlay0 with transparency */
+    background-color: transparent;
+    text-color: @fg-color;
+    handle-color: rgba(186, 194, 222, 0.6);        /* subtext1 with transparency */
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    width: 550px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: @border-color;
+    background-color: @bg-color;
+    padding: 8px 0px;
+}
+
+mainbox {
+    spacing: 10px;
+    padding: 14px;
+    background-color: transparent;
+}
+
+inputbar {
+    spacing: 0px;
+    margin: 0px 0px 8px 0px;
+    padding: 5px 8px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: @border-color;
+    background-color: @bg-color-alt;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    padding: 3px 0px;
+    expand: false;
+    str: "";
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+entry {
+    padding: 5px 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+    placeholder: "Search...";
+    placeholder-color: @subtext0;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+    fixed-height: true;
+    spacing: 5px;
+    background-color: transparent;
+}
+
+scrollbar {
+    handle-width: 5px;
+    handle-color: @handle-color;
+    border-radius: 15px;
+    background-color: @bg-color-alt;
+}
+
+element {
+    orientation: horizontal;
+    spacing: 0px;
+    margin: 0px;
+    padding: 8px 12px;
+    border: 1px solid;
+    border-radius: 25px;
+    border-color: rgba(108, 112, 134, 0.3);
+    background-color: @bg-color-alt;
+    text-color: @fg-color;
+    children: [ "element-text" ];
+}
+
+element selected.normal {
+    border-color: @accent-color;
+    background-color: @bg-color-selected;
+    text-color: @fg-color;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}

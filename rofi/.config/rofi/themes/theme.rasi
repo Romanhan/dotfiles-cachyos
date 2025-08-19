@@ -1,0 +1,228 @@
+@import "catppuccin-mocha"
+
+/* Catppuccin Mocha Colors */
+* {
+    /* Theme-specific color assignments */
+    bg-color: rgba(30, 30, 46, 0.5);              /* base with transparency */
+    bg-color-alt: rgba(69, 71, 90, 0.6);           /* surface1 with transparency */
+    bg-color-selected: rgba(203, 166, 247, 0.2);   /* mauve with low opacity */
+    fg-color: #cdd6f4;                             /* text */
+    accent-color: #cba6f7;                         /* mauve */
+    border-color: rgba(108, 112, 134, 0.6);        /* overlay0 with transparency */
+    background-color: transparent;
+    text-color: @fg-color;
+    handle-color: rgba(186, 194, 222, 0.6);        /* subtext1 with transparency */
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 550px;
+    x-offset: 0px;
+    y-offset: 0px;
+    enabled: true;
+    margin: 0px;
+    padding: 8px 0px;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: @border-color;
+    background-color: @bg-color;
+    cursor: "default";
+}
+
+mainbox {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 14px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    children: [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px 7px 8px 7px;
+    padding: 5px 8px;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: @border-color;
+    background-color: @bg-color-alt;
+    text-color: @fg-color;
+    children: [ "textbox-prompt-colon", "entry", "mode-switcher" ];
+}
+
+textbox-prompt-colon {
+    enabled: true;
+    padding: 3px 0px;
+    expand: false;
+    str: "";
+    background-color: transparent;
+    text-color: @accent-color;
+}
+
+entry {
+    enabled: true;
+    padding: 5px 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+    placeholder: "Search...";
+    placeholder-color: @subtext0;
+    cursor: text;
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 6;
+    cycle: true;
+    dynamic: true;
+    scrollbar: true;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 5px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+scrollbar {
+    handle-width: 5px;
+    handle-color: @handle-color;
+    border-radius: 15px;
+    background-color: @bg-color-alt;
+}
+
+element {
+    transparency: "real";
+    enabled: true;
+    spacing: 10px;
+    margin: 0px 7px;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: rgba(108, 112, 134, 0.3);  /* overlay0 subtle */
+    background-color: rgba(49, 50, 68, 0.4); /* surface0 with transparency */
+    text-color: @fg-color;
+    cursor: pointer;
+}
+
+element normal {
+    border-color: rgba(108, 112, 134, 0.3);
+    background-color: rgba(49, 50, 68, 0.4);
+    text-color: @fg-color;
+}
+
+element selected {
+    border-color: @accent-color;
+    background-color: @bg-color-selected;
+    text-color: @fg-color;
+}
+
+element selected.normal {
+    border-color: @accent-color;
+    background-color: @bg-color-selected;
+    text-color: @fg-color;
+}
+
+element.active {
+    border-color: @green;
+    background-color: rgba(166, 227, 161, 0.2);  /* green with low opacity */
+    text-color: @green;
+}
+
+element selected.active {
+    border-color: @accent-color;
+    background-color: rgba(203, 166, 247, 0.3);  /* mauve with higher opacity */
+    text-color: @accent-color;
+}
+
+element normal.active {
+    border-color: @green;
+    background-color: rgba(166, 227, 161, 0.2);
+    text-color: @green;
+}
+
+element alternate {
+    border-color: rgba(108, 112, 134, 0.3);
+    background-color: rgba(49, 50, 68, 0.4);
+    text-color: @fg-color;
+}
+
+element alternate.active {
+    border-color: @green;
+    background-color: rgba(166, 227, 161, 0.2);
+    text-color: @green;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    cursor: inherit;
+}
+
+mode-switcher {
+    enabled: true;
+    spacing: 3px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+button {
+    padding: 3px 8px;
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: @border-color;
+    background-color: @bg-color-alt;
+    text-color: @subtext1;
+    cursor: pointer;
+}
+
+button selected {
+    border-color: @accent-color;
+    background-color: @bg-color-selected;
+    text-color: @accent-color;
+}
+
+message {
+    enabled: true;
+    margin: 0px 0px 8px 0px;
+    padding: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+textbox {
+    padding: 8px 10px;
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: @border-color;
+    background-color: @bg-color-alt;
+    text-color: @fg-color;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
