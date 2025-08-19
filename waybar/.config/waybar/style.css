@@ -4,7 +4,7 @@
     font-weight: bold;
     font-size: 13px;
     min-width: 20px;
-    min-height: 25px;
+    min-height: 15px;
 }
 
 window#waybar {
@@ -24,20 +24,20 @@ tooltip {
 }
 
 #workspaces button {
-    box-shadow: none;
-    text-shadow: none;
-    padding: 0px;
-    border-radius: 20px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    padding: 1px;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
     margin-left: 0px;
-    padding-left: 3px;
-    padding-right: 3px;
-    margin-right: 1px;
+    margin-right: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
     color: #F0F0F0;
     background: rgba(0, 0, 0, 0); 
     border: 1px solid rgba(158, 158, 158, 0.6);
     animation: ws_normal 20s ease-in-out 1;
+    min-width: 0px;
+    min-height: 0px;
 }
 
 #workspaces button.active {
@@ -78,13 +78,11 @@ tooltip {
 
 #cpu {
     padding-left: 3px;
-    color: #f5e0dc;
 }
 
 #memory {
     padding-left: 10px;
     padding-right: 5px;
-    color: #f5c2e7;
 }
 
 #custom-updates {
@@ -121,7 +119,6 @@ tooltip {
     margin-right: 0;
     margin-left: 0;
     padding-right: 0.5rem;
-    color: #fab387;
     border-left: none;
     border-right: none;
 }
@@ -130,7 +127,6 @@ tooltip {
     margin-left: 0;
     margin-right: 0;
     padding-right: 1rem;
-    color: #f9e2af;
     border-right: none;
     border-left: none;
 }
@@ -157,8 +153,18 @@ tooltip {
     border-right: none;
 }
 
-#battery.critical {
+#battery.critical:not(.charging) {
     color: red;
+}
+
+@keyframes color-fade {
+  from { color: #ff0000; }
+  to { color: #990000; }
+}
+
+#battery.verylow:not(.charging) {
+    color: red;
+    animation: color-fade 2.5s ease-in-out infinite;
 }
 
 #custom-power {

@@ -20,7 +20,7 @@
     
         "cpu": {
             "interval": 10,
-            "format": "󰍛 {usage}%",
+            "format": "<span color='#f5e0dc'>󰍛</span> {usage}%",
             "rotate": 0,
             "format-alt": "{icon0}{icon1}{icon2}{icon3}",
             "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
@@ -33,7 +33,7 @@
                 "m": 30 // medium
             },
             "interval": 30,
-            "format": "󰾆 {used}GB",
+            "format": "<span color='#f5c2e7'>󰾆</span> {used}GB",
             "rotate": 0,
             "format-m": "󰾅 {used}GB",
             "format-h": "󰓅 {used}GB",
@@ -121,7 +121,7 @@
         "backlight": {
             "device": "intel_backlight",
             "rotate": 0,
-            "format": "{icon} {percent}%",
+            "format": "<span color='#eba0ac'>{icon}</span> {percent}%",
             "format-icons": ["", "", "", "", "", "", "", "", ""],
             "tooltip-format": "{icon} {percent}% ",
             "on-scroll-up": "brightnesscontrol.sh i 1",
@@ -130,7 +130,7 @@
         },
     
         "pulseaudio": {
-            "format": "{icon} {volume}",
+            "format": "<span color='#f9e2af'>{icon}</span> {volume}",
             "rotate": 0,
             "format-muted": " ",
             "on-click": "pavucontrol -t 3",
@@ -152,7 +152,7 @@
          },
 
          "clock": {
-            "format": "󰥔 {:%H:%M  󰃮 %d.%m.%y}",
+            "format": "<span color='#a6e3a1'>󰥔</span> {:%H:%M <span color='#94e2d5'>󰃮</span> %d.%m.%y}",
 	          "rotate": 0,
             "tooltip-format": "<span>{calendar}</span>",
             "calendar": {
