@@ -9,3 +9,9 @@ if not set -q SSH_AUTH_SOCK
     eval (ssh-agent -c) >/dev/null
     ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1
 end
+
+# Set up fzf key bindings
+fzf --fish | source
+
+# Must be last line
+zoxide init --cmd cd fish | source
