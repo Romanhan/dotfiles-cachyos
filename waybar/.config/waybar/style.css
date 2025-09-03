@@ -9,14 +9,14 @@
 
 window#waybar {
     background: rgba(30, 30, 46, 0.6); 
-    border: 2px;
     border-radius: 20px;
-    border: 2px solid rgba(108, 112, 134, 0.6);
+    border: 2px solid rgba(138, 138, 138, 0.6);
 }
 
 tooltip {
-    background: rgba(42, 42, 42, 0.3); 
-    border-width: 0px;
+    background: rgba(30, 30, 46, 0.7); 
+    border-radius: 20px;
+    border: 2px solid rgba(108, 112, 134, 0.6);
 }
 
 #window {
@@ -83,6 +83,23 @@ tooltip {
 #memory {
     padding-left: 10px;
     padding-right: 5px;
+}
+
+#custom-storage {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#custom-storage.warning {
+  background-color: #f9e2af;
+  color: #1e1e2e;
+  animation: pulse-warning 2s ease-in-out infinite;
+}
+
+#custom-storage.critical {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+  animation: pulse-critical 1s ease-in-out infinite;
 }
 
 #custom-updates {
