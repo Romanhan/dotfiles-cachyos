@@ -10,7 +10,9 @@ configuration {
     window-format: "{w} · {c} · {t}";
     icon-theme: "Tela-circle-dracula";
     drun-match-fields: "name,generic,exec,categories,keywords";
-    matching: "fuzzy";
+    matching: "normal";
+    sort: true;
+    sorting-method: "fzf";
 }
 
 @theme "theme.rasi"

@@ -4,11 +4,11 @@
 * {
     /* Theme-specific color assignments */
     bg-color: rgba(30, 30, 46, 0.5);              /* base with transparency */
-    bg-color-alt: rgba(69, 71, 90, 0.6);           /* surface1 with transparency */
+    bg-color-alt: rgba(49, 50, 68, 0.4);          /* surface0 with transparency */
     bg-color-selected: rgba(203, 166, 247, 0.2);   /* mauve with low opacity */
     fg-color: #cdd6f4;                             /* text */
     accent-color: #cba6f7;                         /* mauve */
-    border-color: rgba(108, 112, 134, 0.6);        /* overlay0 with transparency */
+    border-color: rgba(108, 112, 134, 0.4);        /* overlay0 with transparency */
     background-color: transparent;
     text-color: @fg-color;
     handle-color: rgba(186, 194, 222, 0.6);        /* subtext1 with transparency */
@@ -19,14 +19,14 @@ window {
     location: center;
     anchor: center;
     fullscreen: false;
-    width: 550px;
+    width: 450px;
     x-offset: 0px;
     y-offset: 0px;
     enabled: true;
     margin: 0px;
-    padding: 8px 0px;
+    padding: 20px 15px;
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 15px;
     border-color: @border-color;
     background-color: @bg-color;
     cursor: "default";
@@ -111,7 +111,7 @@ element {
     border: 1px solid;
     border-radius: 20px;
     border-color: rgba(108, 112, 134, 0.3);  /* overlay0 subtle */
-    background-color: rgba(49, 50, 68, 0.4); /* surface0 with transparency */
+    background-color: @bg-color-alt;
     text-color: @fg-color;
     cursor: pointer;
 }
