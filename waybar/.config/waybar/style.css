@@ -4,36 +4,30 @@
     font-weight: bold;
     font-size: 13px;
     min-width: 20px;
-    min-height: 15px;
+    min-height: 10px;
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.6); 
-    border-radius: 20px;
+    background: rgba(30, 30, 46, 0.6);
+    border-radius: 15px;
     border: 2px solid rgba(138, 138, 138, 0.6);
 }
 
+#window {
+  margin-left: 8px;
+}
+
 tooltip {
-    background: rgba(30, 30, 46, 0.7); 
-    border-radius: 20px;
+    background: rgba(30, 30, 46, 0.7);
+    border-radius: 15px;
     border: 2px solid rgba(108, 112, 134, 0.6);
 }
 
-#window {
-    padding-left: 10px;
-}
-
 #workspaces button {
-    padding: 1px;
+    margin: 0.4rem 0.2rem;
+    padding: 0.1rem 0rem;
     border-radius: 50%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 2px;
-    padding-left: 0px;
-    padding-right: 0px;
     color: #F0F0F0;
-    background: rgba(0, 0, 0, 0); 
     border: 1px solid rgba(158, 158, 158, 0.6);
     animation: ws_normal 20s ease-in-out 1;
     min-width: 0px;
@@ -41,7 +35,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: rgba(203, 166, 247, 0.6); 
+    background: rgba(203, 166, 247, 0.4);
     color: #F0F0F0;
     border: 1px solid rgba(253, 250, 246, 0.6);
     animation: ws_active 20s ease-in-out 1;
@@ -49,15 +43,10 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: rgba(108, 108, 108, 0.3); 
+    background: rgba(203, 166, 247, 0.8);
     color: #F0F0F0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#tray {
-    margin: 0;
-    padding: 0;
 }
 
 #tray menu * {
@@ -68,127 +57,60 @@ tooltip {
     min-height: 1px;
 }
 
-.modules-left {
-    background: rgba(255, 255, 255, 0.1); 
-    margin: 3px 0px 3px 3px;
-    padding: 0px 5px 0px 5px;
-    border-radius: 20px;
-    border: 1px solid rgba(138, 138, 138, 0.6);
+#tray,
+#cpu,
+#memory,
+#custom-storage,
+#custom-updates {
+    margin: 0 5px;
 }
 
 #cpu {
-    padding-left: 3px;
-}
-
-#memory {
-    padding-left: 10px;
-    padding-right: 5px;
-}
-
-#custom-storage {
-    padding-left: 5px;
-    padding-right: 5px;
+  margin-left: 1rem;
 }
 
 #custom-storage.warning {
-  background-color: #f9e2af;
-  color: #1e1e2e;
-  animation: pulse-warning 2s ease-in-out infinite;
+    background-color: #f9e2af;
+    color: #1e1e2e;
+    animation: pulse-warning 2s ease-in-out infinite;
 }
 
 #custom-storage.critical {
-  background-color: #f38ba8;
-  color: #1e1e2e;
-  animation: pulse-critical 1s ease-in-out infinite;
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    animation: pulse-critical 1s ease-in-out infinite;
 }
 
-#custom-updates {
-    padding-left: 5px;	
-    padding-right: 10px;	
+#network,
+#backlight,
+#pulseaudio,
+#clock,
+#language {
+    margin: 0 7px;
 }
 
-.modules-center {
-    background: rgba(255, 255, 255, 0.1); 
-    margin: 3px 0px 3px 0px;
-    padding: 1px 10px 1px 2px;
-    border-radius: 20px;
-    border: 1px solid rgba(138, 138, 138, 0.6);
+#battery,
+#custom-power {
+    margin: 0 5px;
 }
 
-#network, #backlight, #pulseaudio, #clock, #language {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 3px 1px;
-    padding: 0.1rem 0.1rem;
-    border: 1px solid rgba(138, 138, 138, 0.6);
-}
-
-#network {
-    border-radius: 20px 0px 0px 20px;
-    margin-right: 0;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    color: #89dceb;
-    border-right: none;
-}
-
-#backlight {
-    border-radius: 0px 0px 0px 0px;
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 0.5rem;
-    border-left: none;
-    border-right: none;
-}
-
-#pulseaudio {
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 1rem;
-    border-right: none;
-    border-left: none;
-}
-
-#clock {
-    border-radius: 0px 20px 20px 0px;
-    margin-left: 0;
-    padding-right: 0.6rem;
-    border-left: none;
-}
-
-#battery, #custom-power {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 3px 2px;
-    padding: 0.1rem 0.1rem;
-    border: 1px solid rgba(138, 138, 138, 0.6);
-}
-
-#battery {
-    border-radius: 20px 0px 0px 20px;
-    margin-right: 0;
-    padding-left: 0.6rem;
-    padding-right: 0.4rem;
-    border-right: none;
+@keyframes blink {
+    to {
+        color: #ffffff;
+        color: #000000;
+    }
 }
 
 #battery.critical:not(.charging) {
     color: red;
 }
 
-@keyframes color-fade {
-  from { color: #ff0000; }
-  to { color: #990000; }
-}
-
 #battery.verylow:not(.charging) {
     color: red;
-    animation: color-fade 2.5s ease-in-out infinite;
+    animation: blink 2.5s ease-in-out infinite;
 }
 
 #custom-power {
-    border-radius: 0px 20px 20px 0px;
-    margin-left: 0;
-    margin-right: 3px;
-    padding-right: 0.5rem;
+    margin-right: 1rem;
     color: #b4befe;
-    border-left: none;
 }

@@ -28,7 +28,7 @@ check_updates() {
     if command -v flatpak >/dev/null 2>&1; then
       tooltip+="\\nFlatpak: $flatpak_updates"
     fi
-    echo "{\"text\": \"󰅢 $total_updates\", \"tooltip\": \"$tooltip\"}"
+    echo "{\"text\":\"󰅢 $total_updates\",\"tooltip\":\"$tooltip\"}"
   fi
 }
 
