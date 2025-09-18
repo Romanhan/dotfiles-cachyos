@@ -3,12 +3,11 @@
     font-family: "CaskaydiaCove Nerd Font Propo";
     font-weight: bold;
     font-size: 13px;
-    min-width: 20px;
     min-height: 10px;
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.6);
+    background: rgba(17, 28, 24, 0.8);
     border-radius: 15px;
     border: 2px solid rgba(138, 138, 138, 0.6);
 }
@@ -24,8 +23,8 @@ tooltip {
 }
 
 #workspaces button {
-    margin: 0.4rem 0.2rem;
-    padding: 0.1rem 0rem;
+    margin: 0.4rem 0.1rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 50%;
     color: #F0F0F0;
     border: 1px solid rgba(158, 158, 158, 0.6);
