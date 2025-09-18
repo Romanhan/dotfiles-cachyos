@@ -12,6 +12,7 @@
     background-color: transparent;
     text-color: @fg-color;
     handle-color: rgba(186, 194, 222, 0.6);        /* subtext1 with transparency */
+    font: "CaskaydiaCove Nerd Font Propo 11";
  }
 
 window {
@@ -24,9 +25,9 @@ window {
     y-offset: 0px;
     enabled: true;
     margin: 0px;
-    padding: 10px 0px;
+    padding: 15px 5px;
     border: 1px solid;
-    border-radius: 15px;
+    border-radius: 10px;
     border-color: @border-color;
     background-color: @bg-color;
     cursor: "default";
@@ -54,7 +55,7 @@ listview {
     reverse: false;
     fixed-height: true;
     fixed-columns: true;
-    spacing: 8px;
+    spacing: 5px;
     margin: 0px;
     padding: 0px;
     border: 0px solid;
@@ -66,9 +67,9 @@ listview {
 element {
     transparency: "real";
     enabled: true;
-    spacing: 0px;
+    spacing: 5px;
     margin: 0px 10px;
-    padding: 5px 10px; /* Slightly more padding for better spacing */
+    padding: 8px 10px;
     border: 1px solid;
     border-radius: 20px;
     border-color: rgba(176, 176, 176, 0.2);

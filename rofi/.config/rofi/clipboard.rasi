@@ -25,10 +25,10 @@ window {
     anchor: center;
     width: 550px;
     border: 1px solid;
-    border-radius: 25px;
+    border-radius: 10px;
     border-color: @border-color;
     background-color: @bg-color;
-    padding: 8px 0px;
+    padding: 15px 15px;
 }
 
 mainbox {
