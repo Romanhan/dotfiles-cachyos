@@ -9,3 +9,5 @@ abbr -a -- lt 'eza --tree --icons --git'
 abbr -a -- dfc dotfiles-cachyos/
 abbr -a -- n nvim
 abbr -a -- ff "fzf --preview='bat --color=always {}'"
+abbr -a -- cat bat
+abbr -a -- rm 'trash -v'

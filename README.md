@@ -56,6 +56,8 @@ web2app-remove "AppName"          # Remove web app
 - `ls` → `eza -lh --icons=auto`
 - `n` → `nvim`
 - `ff` → `fzf --preview='bat --color=always {}'`
+- `cat` → `bat`
+- `rm` → `trash -v` 
 
 ### Key Shortcuts
 - `Super + T` - Terminal (Kitty)
